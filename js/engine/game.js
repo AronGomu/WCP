@@ -1,6 +1,10 @@
-import { Database } from "./database.js";
+import { Database } from "../sets/database.js";
+import { Card } from "./card.js";
+import { Cost } from "./cost.js";
 
-export class GameEngine {
+
+
+export class Game {
     ressources; // Cost Object
     deck; // Card list
     hand; // Card list
@@ -37,37 +41,5 @@ export class GameEngine {
         this.stack = hand[i];
         this.hand.splice(i, 1);
         this.stack.effect(ge);
-    }
-}
-
-
-export class Card {
-    id; // string
-    name; // string
-    cost; // Cost
-    img; // img relative path
-    text; // text effect
-
-    constructor(id, name, cost, img, text) {
-        this.id = id;
-        this.name = name;
-        this.cost = cost;
-        this.img = img;
-        this.text = text;
-    }
-}
-
-export class Cost {
-
-    unc; // int, uncolor cost
-    red; // int
-    blue; // int
-    green; // int
-
-    constructor(unc, red, blue, green) {
-        this.unc = unc;
-        this.red = red;
-        this.blue = blue;
-        this.green = green;
     }
 }

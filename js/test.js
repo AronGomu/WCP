@@ -1,8 +1,8 @@
-import { GameEngine } from "./gameEngine.js";
+import { Game } from "./engine/game.js";
 
 export function test () {
 
-    ge = new GameEngine();
+    ge = new Game();
 
     console.log(ge);
 

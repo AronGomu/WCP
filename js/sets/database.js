@@ -1,4 +1,4 @@
-import { testSet } from "./sets/test.js";
+import { testSet } from "./test.js";
 
 export class Database {
 

@@ -7,6 +7,9 @@ function newGame() {
     test();
 }
 
+function myFunction() {
+    console.log("do somth");
+}
 
 Element.prototype.remove = function() {
     this.parentElement.removeChild(this);
@@ -17,4 +20,4 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
             this[i].parentElement.removeChild(this[i]);
         }
     }
-}
+}               
